@@ -3,13 +3,13 @@ import { useNavigate } from 'react-router-dom';
 import { getUser, removeUserSession } from '../utils/common';
 
 const Dashboard = props => {
-  const history = useNavigate();
+  const navigate = useNavigate();
   const user = getUser();
 
   // handle click event of logout button
   const handleLogout = () => {
     removeUserSession();
-    history('/login');
+    navigate('/login');
   }
 
   return (
