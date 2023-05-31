@@ -12,6 +12,7 @@ import Dashboard from './components/Dashboard';
 import Home from './components/Home';
 import NotFound from './components/NotFound';
 import Footer from './components/Footer';
+import Navbar from './components/Navbar';
 
 function App() {
     const [authLoading, setAuthLoading] = useState(true);
@@ -38,12 +39,9 @@ function App() {
     return (
         <BrowserRouter>
 
-        <div className="header">
-            <NavLink className={({ isActive }) => isActive ? 'active' : ''} to="/">Home</NavLink>
-            <NavLink className={({ isActive }) => isActive ? 'active' : ''} to="/login">Login</NavLink><small>(Access without token only)</small>
-            <NavLink className={({ isActive }) => isActive ? 'active' : ''} to="/dashboard">Dashboard</NavLink><small>(Access with token only)</small>
-            
-        </div>
+
+        <Navbar />
+
         <div className="content">
             <Routes>
                 <Route path="*" element={<NotFound />} />
