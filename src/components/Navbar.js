@@ -1,17 +1,25 @@
 import { Component } from "react";
-//import "./NavbarStyles.css";
+import "./css/NavbarStyles.css";
 import { MenuItems } from "./MenuItems";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 class Navbar extends Component {
     state = { clicked: false };
     handleClick = () => {
         this.setState({ clicked: !this.state.clicked })
-    }
+    };
+    /*navigate = useNavigate();
+    navigateLogin = () => {
+        this.navigate('/Login');
+    };*/
+
+    //<i className="fa-solid fa-tree-deciduous"></i>
     render() {
         return (
             <nav className="NavbarItems">
-                <h1 className="navbar-logo"> Ovosad</h1>
+                <div className="navbar-logo">
+                    <h1 > Ovosad </h1>                            
+                </div>
 
                 <div className="menu-icons" onClick={this.handleClick}>
                     <i className={this.state.clicked ? "fas fa-bars" : "fas fa-times"}></i>
@@ -28,7 +36,8 @@ class Navbar extends Component {
                             </li>
                         );
                     })}
-                    <button>Login</button>
+                    
+                    <button >Login</button>
                     <button>Register</button>
                 </ul>
             </nav>

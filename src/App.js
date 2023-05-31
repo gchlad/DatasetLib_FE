@@ -38,8 +38,7 @@ function App() {
 
     return (
         <BrowserRouter>
-
-
+        <div className="bg-image">
         <Navbar />
 
         <div className="content">
@@ -54,28 +53,15 @@ function App() {
                 </Route>
             </Routes>
         </div>
-            <div style={{
-                backgroundImage: "url(" + (require("./imgs/apples.jpg")) + ")",
-                filter: "blur(8px)",
-                backgroundPosition: 'center',
-                backgroundSize: 'cover',
-                backgroundRepeat: 'no-repeat',
-                flexDirection: 'column',
-                justifyContent: 'flex-start',
-                alignItems: 'center',
-                backgroundColor: 'rgba(0,0,0,0.45)',
-                width: null,
-                height: '100%',
-                marginTop: 55,
-                flex: 1,
-                position: 'relative',
-                bottom: 0
-            }}>
-            </div>
+
+ 
+                <Footer />
+                This is end of img
+        </div>
 
 
 
-            <Footer />
+            
     
 
     </BrowserRouter>

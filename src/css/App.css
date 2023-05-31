@@ -1,3 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,300&display=swap');
+@import url ("./imgs/apples.jpg");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.App {
+    font-family: 'Poppins', 'Siemens TIA Portal Basic';
+    text-align: center;
+}
+/*
+.bg-image {
+
+    background-image: url((require("./imgs/apples.jpg")));
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.bg-image {
+    background-image: url("https://www.prodejstromku.cz/img/clanky-nove/Vzd%C3%A1lenosti/vzfalenost1.jpg");
+    height: 100vh;
+    filter: blur(10px);
+    filter:contrast(0.5);
+    opacity:0.2;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}*/
+
+/*
 /*.App {
   text-align: center;
 }

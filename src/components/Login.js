@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { setUserSession } from '../utils/common';
 import axios from 'axios';
+import "./css/LoginStyles.css";
 
 const Login = props => {
   const history = useNavigate();
@@ -25,8 +26,9 @@ const Login = props => {
     });
   }
 
-  return (
-    <div>
+    return (
+    <nav className="login">
+    <div >
       Login<br /><br />
       <div>
         Username<br />
@@ -39,6 +41,8 @@ const Login = props => {
       {error && <><small style={{ color: 'red' }}>{error}</small><br /></>}<br />
       <input type="button" value={loading ? 'Loading...' : 'Login'} onClick={handleLogin} disabled={loading} /><br />
     </div>
+    </nav>
+
   );
 }
 
